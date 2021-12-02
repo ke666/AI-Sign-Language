@@ -4,7 +4,7 @@
 
 In almost computer vision method, the input device is the images of hands or fingers. This methods require only a camera without the use of any extra devices. These systems extracted the biological characteristic by describing artificial vision systems that are implemented in software and/or hardware. This approach created a challenging problem as these systems need to be background invariant, lighting insensitive, person and camera independent to achieve real time performance. Moreover, such systems have to be enhanced to addapt to requirements, including accuracy and robustness.
 
-<img src="img/1.png" width="300">
+<img src="img/1.png" >
 Block Diagram of vision based recognition system 
 
 Almost vision method is based on the way human get information in their environment but it is not easy to perform it in devices. a lot of different approaches have been verified so far. One of them is to build a three dimensional model of the human gesture. The system is compared with images of the gesture by one or more cameras, and parameters responses to palm direction and joint angles are estimated. Gesture classification is created by these parameters. Second one to get the picture using a camera then extract some feature and those features are input in a classification algorithm for classification.
@@ -12,7 +12,7 @@ Almost vision method is based on the way human get information in their environm
 ## Algorithms
 
 ### Use case diagram.
-<img src="img/2.png" width="300">
+<img src="img/2.png" >
 Use Case Diagram for Sign Language Recognition Using Hand Gestures.
 
 In our model, the users have 3 abilities: adding gestures, regconizing gestures and observing or equalizing manual parameters of training models. Users can create the gestures added our model through the user display. After that, the information will be trained the system by CNN [5].
@@ -33,7 +33,9 @@ Exporting – A user can export the outputs of the scanner character into an tex
 
 To build the data set as a model and training we choose Vietnamese sign language. We opted out of the Ho Chi Minh Sign Language Dictionary for 12 words of sign language[9]. Each word in the archive is recorded with a total of about 2200 samples. These gestures are captured using the camera. 
 
-Fig. 5. Some word of the training model.
+<img src="img/2.5.png" >
+
+Fig. Some word of the training model.
 
 After that, the best 2000 samples were selected. All of these images are extracted from the full animation of gestures, from the first frame to the last frame. The recorded sample will be processed to remove the background and keep the hand grayscale image.
 
@@ -69,7 +71,9 @@ All the models we trained are converted by classifier.save into h5py file (VSLMo
 
 The problem when we compare real time is that we need to compare data sources, so we use deep learning to do that. As we mentioned the above image processing method, we also use it for handling the input gestures. We use OpenCV for the webcam recognition. The input gestures are converted into grayscale mode.
 
-Fig. 8. Single word detected in real-time.
+<img src="img/4.png" >
+
+Fig. Single word detected in real-time.
 
 At this point, we exploit the comparison method of Keras (Tensorflow framework) [4] which can connect with trained data. Our real-time input has size of 64×64, we used img_to_array to encode it into matrix of 0 and 1 and into vectors then we start to compare with our trained model (VSLModel.h5) by classifier.predict. With the accuracy accepted, the result text is appeared in the screen. However, we set up the gap among words based on the delay of our input gestures. For example, if we don’t make any operation or we halt our action for a moment, the program understand it as a delay and the output will be an underscore. The resting frame we set here is 20. We also make a create gestures option which can allow to create your own words but only with low accuracy (1 image to compare) in 1 session.
 
@@ -83,12 +87,15 @@ For single gesture tested, we received high accuracy result. Therefore, it is su
 
 For the training accuracy test, we captured 200 frames of a real-time gesture and start to test the accuracy compare with data trained, the accuracy oscillate between 99% and 100%, which can show that our training method has a very high accuracy. Our model is focusing a lot of attention on training data and does not bring generality on never-before-seen data. This leads to the model achieving extremely good results on the training data set
 
- 
-Fig. 9. Training accuracy plot using matplotlib library.
+ <img src="img/4.5.png" >
+
+Fig. Training accuracy plot using matplotlib library.
 
 In manual testing, we perform 10 gestures in 200 times and record the obtained results and calculate to percentage accuracy, the accuracy oscillate between 97% and 99.5%. This test is performed on only one camera, the actual accuracy may vary with poor camera quality.
 
-Fig. 10. “I am boring” recognition
+<img src="img/5.png" >
+
+Fig.  “I am boring” recognition
 
 Overall, the application works in real-time smoothly and acceptable. However, we are doing with the low trained data. With the increase of trained data, the accuracy is changed. We will work more to handle all the existed problems. Thus, we will try to go a step further with the addition of background and background filtering.
 
