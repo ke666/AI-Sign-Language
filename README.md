@@ -57,7 +57,9 @@ Step 3. Before fully connect among layers, we flat them with classfier.add(flatt
 
 Step 4. Finally, we put all the layers together into a completely CNN [5]. 2 final layer is a fully connected layer. This layer connect every neuron from max-pooled layer to every output neuron. At this point, we have a CNN [5]  used for training.
 
-Fig. 6. Deep learning architecture of CNN in the context of transportation.
+<img src="img/3.png" >
+
+Fig. Deep learning architecture of CNN in the context of transportation.
 
 After creating a CNN [5], we jump to training part with compile() method.
 
