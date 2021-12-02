@@ -4,15 +4,16 @@
 
 In almost computer vision method, the input device is the images of hands or fingers. This methods require only a camera without the use of any extra devices. These systems extracted the biological characteristic by describing artificial vision systems that are implemented in software and/or hardware. This approach created a challenging problem as these systems need to be background invariant, lighting insensitive, person and camera independent to achieve real time performance. Moreover, such systems have to be enhanced to addapt to requirements, including accuracy and robustness.
 
-Block Diagram of vision based recognition system (hình)
+<img src="img/1.png" width="300">
+Block Diagram of vision based recognition system 
 
 Almost vision method is based on the way human get information in their environment but it is not easy to perform it in devices. a lot of different approaches have been verified so far. One of them is to build a three dimensional model of the human gesture. The system is compared with images of the gesture by one or more cameras, and parameters responses to palm direction and joint angles are estimated. Gesture classification is created by these parameters. Second one to get the picture using a camera then extract some feature and those features are input in a classification algorithm for classification.
 
 ## Algorithms
 
 ### Use case diagram.
-
-Fig. 4. Use Case Diagram for Sign Language Recognition Using Hand Gestures.
+<img src="img/2.png" width="300">
+Use Case Diagram for Sign Language Recognition Using Hand Gestures.
 
 In our model, the users have 3 abilities: adding gestures, regconizing gestures and observing or equalizing manual parameters of training models. Users can create the gestures added our model through the user display. After that, the information will be trained the system by CNN [5].
 
